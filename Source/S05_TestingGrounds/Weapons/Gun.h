@@ -25,7 +25,8 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 		TSubclassOf<class ABallProjectile> ProjectileClass;
 
-	void OnFire();
+	UFUNCTION(BlueprintCallable, Category = "Input")
+		void OnFire();
 
 protected:
 	// Called when the game starts or when spawned
@@ -61,5 +62,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	UAnimInstance* AnimInstance;
+
+	
+
 	
 };
