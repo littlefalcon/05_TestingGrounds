@@ -49,12 +49,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Gameplay)
 	FVector GunOffset;
 
-	/** Projectile class to spawn */
-	UPROPERTY(EditDefaultsOnly, Category=Projectile)
-	TSubclassOf<class ABallProjectile> ProjectileClass;
-
-	
-
+	UPROPERTY(EditDefaultsOnly, Category = "Setup")
+		TSubclassOf<class AGun> GunBlueprint;
+private:
+	AGun* Gun = nullptr;
 protected:
 	
 	/** Resets HMD orientation and position in VR. */
