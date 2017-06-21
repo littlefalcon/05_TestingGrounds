@@ -25,13 +25,14 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 		TSubclassOf<class ABallProjectile> ProjectileClass;
 
+	void OnFire();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
 	/** Fires a projectile. */
-	void OnFire();
+	
 
 public:	
 	// Called every frame
