@@ -3,6 +3,7 @@
 #include "Gun.h"
 #include "Animation/AnimInstance.h"
 #include "../Weapons/BallProjectile.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AGun::AGun()
@@ -81,7 +82,7 @@ void AGun::OnFire()
 	// try and play the sound if specified
 	if (FireSound != NULL)
 	{
-		//UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
 	// try and play a firing animation if specified
