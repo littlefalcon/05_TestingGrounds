@@ -3,6 +3,7 @@
 #include "Tile.h"
 #include "DrawDebugHelpers.h"
 #include "Engine.h"
+
 // Sets default values
 ATile::ATile()
 {
@@ -17,6 +18,7 @@ void ATile::BeginPlay()
 	Super::BeginPlay();
 	//CanSpawnAtLocation(GetActorLocation(), 300);
 	//CanSpawnAtLocation(GetActorLocation() + FVector(0, 0, 1000), 300);
+	
 }
 
 // Called every frame
