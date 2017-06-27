@@ -15,8 +15,8 @@ ATile::ATile()
 void ATile::BeginPlay()
 {
 	Super::BeginPlay();
-	CanSpawnAtLocation(GetActorLocation(), 300);
-	CanSpawnAtLocation(GetActorLocation() + FVector(0, 0, 1000), 300);
+	//CanSpawnAtLocation(GetActorLocation(), 300);
+	//CanSpawnAtLocation(GetActorLocation() + FVector(0, 0, 1000), 300);
 }
 
 // Called every frame
@@ -76,7 +76,7 @@ bool ATile::CanSpawnAtLocation(FVector Location, float Radius) {
 	bool HasHit = GetWorld()->SweepSingleByChannel(
 		HitResult,
 		GlobalLocation,
-		Location,
+		GlobalLocation,
 		FQuat::Identity,
 		ECC_Spawn,
 		FCollisionShape::MakeSphere(Radius)
